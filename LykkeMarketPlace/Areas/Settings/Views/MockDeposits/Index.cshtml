@@ -1,0 +1,30 @@
+﻿@using Core
+@using LykkeMarketPlace.Strings
+@model dynamic
+
+@{
+    Layout = null;
+
+
+}
+
+<div style="width: 500px; margin: 50px auto;">
+    <form id="frmMockDeposit">
+        @HelpersUi.RenderEditAndLabel(Phrases.MoneyAmount, "Amount", "number", "10000")
+
+        
+        <div class="input-group">
+
+            <span class="input-group-addon">@Phrases.Currency</span>
+            <select id="currency" name="Currency" class="form-control">
+                @foreach (var cur in GlobalSettings.Currencies.Values)
+                {
+                    <option value="@cur.Id">@cur.Name</option>
+                }
+            </select>
+        </div>
+
+    </form>
+
+    @HelpersUi.RenderOkCancelDialog(Phrases.Deposit, Url.Action("MockDeposit"), "#frmMockDeposit")
+</div>
