@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Net;
 using System.Web.Mvc;
 using AzureRepositories;
@@ -14,12 +15,52 @@ using LykkeMarketPlace.Hubs;
 
 namespace LykkeMarketPlace
 {
+    public static class Settings
+    {
+
+        public static string ConnectionString
+        {
+            get
+            {
+                try
+                {
+                    return ConfigurationManager.AppSettings["ConnectionString"];
+                }
+                catch (Exception)
+                {
+
+                    return "UseDevelopmentStorage=true";
+                }
+            }
+        }
+
+        public static IPEndPoint FeedIpEndPoint
+        {
+            get
+            {
+                try
+                {
+                    var strings = ConfigurationManager.AppSettings["FeedIp"].Split(':');
+                    return new IPEndPoint(IPAddress.Parse(strings[0]), int.Parse(strings[1]));
+                }
+                catch (Exception)
+                {
+
+                    return new IPEndPoint(IPAddress.Parse("127.0.0.1"), 8090);
+                }
+            }
+        }
+
+    }
+
+
+
 
     public static class Dependencies
     {
-        private const string ConnString = "";
 
-   //   private static MockFeed _mockFeed;
+
+        //   private static MockFeed _mockFeed;
         private static Mt4BridgeFeedSource _mt4BridgeFeedSource;
 
 
@@ -34,15 +75,17 @@ namespace LykkeMarketPlace
 
         public static IDependencyResolver CreateDepencencyResolver()
         {
+
+
             var dr = new MyDependencyResolver();
             var log = new LogToConsole();
             dr.IoC.Register<ILog>(log);
 
-            #if DEBUG
-              AzureRepoBinder.BindAzureReposInMem(dr.IoC);
-            #else
-              AzureRepoBinder.BindAzureRepositories(dr.IoC, ConnString, log);
-            #endif
+#if DEBUG
+            AzureRepoBinder.BindAzureReposInMem(dr.IoC);
+#else
+              AzureRepoBinder.BindAzureRepositories(dr.IoC, Settings.ConnectionString, log);
+#endif
 
 
 
@@ -55,10 +98,8 @@ namespace LykkeMarketPlace
             //    MarketProfileCache.SetPrice(ap);
             //}, log);
             //_mockFeed.Start();
-      
 
-            var ipEndPoint = new IPEndPoint(IPAddress.Parse("104.46.49.5"), 8090);
-            _mt4BridgeFeedSource = new Mt4BridgeFeedSource(ipEndPoint, log);
+            _mt4BridgeFeedSource = new Mt4BridgeFeedSource(Settings.FeedIpEndPoint, log);
 
             _mt4BridgeFeedSource.RegisterFeed(aqs =>
             {
