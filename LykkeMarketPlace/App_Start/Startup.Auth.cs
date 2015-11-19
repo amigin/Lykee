@@ -17,8 +17,7 @@ namespace LykkeMarketPlace
         public void ConfigureAuth(IAppBuilder app)
         {
 
-            Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("en");
-            Thread.CurrentThread.CurrentUICulture = Thread.CurrentThread.CurrentCulture;
+
 
             // Configure the db context, user manager and signin manager to use a single instance per request
             app.CreatePerOwinContext(ApplicationDbContext.Create);

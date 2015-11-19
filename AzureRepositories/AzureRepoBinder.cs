@@ -28,6 +28,10 @@ namespace AzureRepositories
 
             ioc.Register<IOrdersRepository>(
                 AzureRepoFactories.CreateOrdersRepository(connString, log));
+
+
+            ioc.Register<ITraderSettingsRepository>(
+                AzureRepoFactories.CreateTraderSettingsRepository(connString, log));
         }
 
 
@@ -45,6 +49,10 @@ namespace AzureRepositories
 
             ioc.Register<IOrdersRepository>(
                 new OrdersRepository(new NoSqlTableInMemory<OrderEntity>()));
+
+
+            ioc.Register<ITraderSettingsRepository>(
+                new TraderSettingsRepository(new NoSqlTableInMemory<TraderSettingsEntity>()));
         }
 
     }

@@ -61,6 +61,24 @@ namespace LykkeMarketPlace.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Action.
+        /// </summary>
+        public static string Action {
+            get {
+                return ResourceManager.GetString("Action", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Active Orders.
+        /// </summary>
+        public static string ActiveOrders {
+            get {
+                return ResourceManager.GetString("ActiveOrders", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to All currencies.
         /// </summary>
         public static string AllCurrencies {
@@ -79,6 +97,15 @@ namespace LykkeMarketPlace.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Canceled Orders.
+        /// </summary>
+        public static string CanceldOrders {
+            get {
+                return ResourceManager.GetString("CanceldOrders", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Currency.
         /// </summary>
         public static string Currency {
@@ -93,6 +120,15 @@ namespace LykkeMarketPlace.Strings {
         public static string Deposit {
             get {
                 return ResourceManager.GetString("Deposit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fulfilled Orders.
+        /// </summary>
+        public static string DoneOrders {
+            get {
+                return ResourceManager.GetString("DoneOrders", resourceCulture);
             }
         }
         
@@ -120,6 +156,15 @@ namespace LykkeMarketPlace.Strings {
         public static string FieldShouldNotBeEmpty {
             get {
                 return ResourceManager.GetString("FieldShouldNotBeEmpty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Instrument.
+        /// </summary>
+        public static string Instrument {
+            get {
+                return ResourceManager.GetString("Instrument", resourceCulture);
             }
         }
         
@@ -196,6 +241,15 @@ namespace LykkeMarketPlace.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Orders.
+        /// </summary>
+        public static string Orders {
+            get {
+                return ResourceManager.GetString("Orders", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Password.
         /// </summary>
         public static string Password {
@@ -232,6 +286,33 @@ namespace LykkeMarketPlace.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Rate.
+        /// </summary>
+        public static string Rate {
+            get {
+                return ResourceManager.GetString("Rate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Registered.
+        /// </summary>
+        public static string Registered {
+            get {
+                return ResourceManager.GetString("Registered", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Request.
+        /// </summary>
+        public static string Request {
+            get {
+                return ResourceManager.GetString("Request", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Settings.
         /// </summary>
         public static string Settings {
@@ -255,6 +336,15 @@ namespace LykkeMarketPlace.Strings {
         public static string SignUp {
             get {
                 return ResourceManager.GetString("SignUp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Status.
+        /// </summary>
+        public static string Status {
+            get {
+                return ResourceManager.GetString("Status", resourceCulture);
             }
         }
         

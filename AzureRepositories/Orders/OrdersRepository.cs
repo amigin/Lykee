@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AzureStorage;
 using Common;
 using Core.Orders;
 using Microsoft.WindowsAzure.Storage.Table;
@@ -104,6 +105,17 @@ namespace AzureRepositories.Orders
             var entities = await _tableStorage.GetDataAsync(partitionKey);
 
             return entities.Select(itm => itm.GetOrder());
+        }
+
+        public async Task<IEnumerable<OrderBase>> GetOrdersByTraderAsync(string traderId, Func<OrderBase, bool> filter)
+        {
+            var partitionKey = OrderEntity.GeneratePartitionKey(traderId);
+
+            var result = filter == null 
+                ? await _tableStorage.GetDataAsync(partitionKey)
+                :await _tableStorage.ScanAndGetList(partitionKey, itm => filter(itm.GetOrder()));
+
+            return result.Select(itm => itm.GetOrder());
         }
 
         public async Task UpdateOrderAsync(OrderBase updatedOrder)

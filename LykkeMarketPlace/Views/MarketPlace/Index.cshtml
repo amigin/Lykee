@@ -49,6 +49,21 @@
         </table>
     </div>*@
 
+    <div class="sideBarItem" onclick="ui.showDialog('@Url.Action("Index","Orders")');">
+        <table>
+            <tr>
+                <td style="width: 62px;">
+                    <img class="curIcon" src="~/Images/Orders.png" />
+                </td>
+                <td class="sideBarDescription">
+                    <div>
+                        <b>@Phrases.Orders</b>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
     <div class="sideBarItem" onclick="ui.showDialog('@Url.Action("Index","Dialog", new {area="Settings"})');">
         <table>
             <tr>

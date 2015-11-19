@@ -7,6 +7,7 @@ using System.Web.Mvc;
 using Common;
 using Core.Traders;
 using LykkeMarketPlace.Models;
+using LykkeMarketPlace.Services;
 using LykkeMarketPlace.Strings;
 using Microsoft.AspNet.Identity;
 using Microsoft.Owin.Security;
@@ -26,8 +27,11 @@ namespace LykkeMarketPlace.Controllers
         }
 
 
-        public ActionResult Index()
+        public ActionResult Index(string langId)
         {
+
+            if (langId != null)
+                this.SetLanguage(langId);
 
 #if DEBUG
 #else

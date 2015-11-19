@@ -55,6 +55,7 @@
     <Compile Include="Orders\IOrderExecuter.cs" />
     <Compile Include="Orders\IOrdersRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Traders\ITraderSettingsRepository.cs" />
     <Compile Include="Traders\ITradersRepository.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -117,17 +117,29 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Action" xml:space="preserve">
+    <value>Action</value>
+  </data>
+  <data name="ActiveOrders" xml:space="preserve">
+    <value>Active Orders</value>
+  </data>
   <data name="AllCurrencies" xml:space="preserve">
     <value>All currencies</value>
   </data>
   <data name="Cancel" xml:space="preserve">
     <value>Cancel</value>
   </data>
+  <data name="CanceldOrders" xml:space="preserve">
+    <value>Canceled Orders</value>
+  </data>
   <data name="Currency" xml:space="preserve">
     <value>Currency</value>
   </data>
   <data name="Deposit" xml:space="preserve">
     <value>Deposit</value>
+  </data>
+  <data name="DoneOrders" xml:space="preserve">
+    <value>Fulfilled Orders</value>
   </data>
   <data name="DoNotHaveAnAccount" xml:space="preserve">
     <value>Do not have an account? Sign up here...</value>
@@ -137,6 +149,9 @@
   </data>
   <data name="FieldShouldNotBeEmpty" xml:space="preserve">
     <value>Field should not be empty</value>
+  </data>
+  <data name="Instrument" xml:space="preserve">
+    <value>Instrument</value>
   </data>
   <data name="InvalidAmountFormat" xml:space="preserve">
     <value>Invalid amount format</value>
@@ -162,6 +177,9 @@
   <data name="OrderHasBeenRegistered" xml:space="preserve">
     <value>Order has been registered</value>
   </data>
+  <data name="Orders" xml:space="preserve">
+    <value>Orders</value>
+  </data>
   <data name="Password" xml:space="preserve">
     <value>Password</value>
   </data>
@@ -174,6 +192,15 @@
   <data name="PleaseTypeEmailHere" xml:space="preserve">
     <value>Please, type email here</value>
   </data>
+  <data name="Rate" xml:space="preserve">
+    <value>Rate</value>
+  </data>
+  <data name="Registered" xml:space="preserve">
+    <value>Registered</value>
+  </data>
+  <data name="Request" xml:space="preserve">
+    <value>Request</value>
+  </data>
   <data name="Settings" xml:space="preserve">
     <value>Settings</value>
   </data>
@@ -182,6 +209,9 @@
   </data>
   <data name="SignUp" xml:space="preserve">
     <value>Sign up</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Status</value>
   </data>
   <data name="UserWithEmalExists" xml:space="preserve">
     <value>Users this the same email already exists</value>

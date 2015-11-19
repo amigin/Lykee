@@ -111,6 +111,7 @@ namespace Core.Orders
 
         Task RegisterOrderAsync(OrderBase order);
         Task<IEnumerable<OrderBase>> GetOrdersByStatusAsync(OrderStatus orderStatus);
+        Task<IEnumerable<OrderBase>> GetOrdersByTraderAsync(string traderId, Func<OrderBase, bool> filter);
         Task UpdateOrderAsync(OrderBase order);
     }
 

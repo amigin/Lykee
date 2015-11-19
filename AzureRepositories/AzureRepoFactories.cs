@@ -36,5 +36,11 @@ namespace AzureRepositories
             return new OrdersRepository(new AzureTableStorage<OrderEntity>(connstring, "Orders", log));
         }
 
+
+        public static TraderSettingsRepository CreateTraderSettingsRepository(string connString, ILog log)
+        {
+            return new TraderSettingsRepository(new AzureTableStorage<TraderSettingsEntity>(connString, "TraderSettings", log));
+        }
+
     }
 }

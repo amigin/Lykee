@@ -8,6 +8,7 @@ namespace LykkeMarketPlace
     {
         public void Configuration(IAppBuilder app)
         {
+            app.Localize();
             ConfigureAuth(app);
             app.MapSignalR();
         }

@@ -159,7 +159,7 @@ border-top-right-radius: 3px;
     background-image: url(/Images/shadow-in-250.png);
     background-position: top center;
     background-repeat: no-repeat;
-    background-size: 95%;
+    background-size: 90%;
 }
 
 
@@ -171,4 +171,8 @@ border-top-right-radius: 3px;
     border: 1px lightgray solid;
     border-radius: 5px;
     box-shadow: 0 2px 2px lightgray;
+}
+
+.lang-icon {
+    width: 24px;
 }

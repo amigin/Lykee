@@ -74,6 +74,7 @@
     <Compile Include="Orders\OrdersRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="AzureRepoBinder.cs" />
+    <Compile Include="Traders\TraderSettingsRepository.cs" />
     <Compile Include="Traders\TradersRepository.cs" />
   </ItemGroup>
   <ItemGroup>
